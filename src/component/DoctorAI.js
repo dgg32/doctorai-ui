@@ -70,6 +70,7 @@ class DoctorAI extends Component {
     async function callAsync() {
       let textToSpeak = ''
       try {
+        console.log(search)
         if (search) {
           console.log("command", command);
           const response = await client.send(command);
