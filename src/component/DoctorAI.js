@@ -52,10 +52,13 @@ class DoctorAI extends Component {
     };
 
     const input = {
-        botAliasId: process.env.REACT_APP_LEX_botAliasId,
+        //botAliasId: process.env.REACT_APP_LEX_botAliasId,
+        botAliasId: "TSTALIASID",
         botId: process.env.REACT_APP_LEX_botId,
-        localeId: process.env.REACT_APP_LEX_localeId,
-        sessionId: process.env.REACT_APP_LEX_sessionId,
+        //localeId: process.env.REACT_APP_LEX_localeId,
+        //sessionId: process.env.REACT_APP_LEX_sessionId,
+        localeId: "en_US",
+        sessionId: "test_session",
         requestContentType: 'text/plain; charset=utf-8',
         text: search
     }
