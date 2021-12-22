@@ -71,6 +71,7 @@ class DoctorAI extends Component {
       let textToSpeak = ''
       try {
         if (search) {
+          console.log("command", command);
           const response = await client.send(command);
           textToSpeak = response.messages[0].content;
           console.log('Doctor AI:' + textToSpeak);
