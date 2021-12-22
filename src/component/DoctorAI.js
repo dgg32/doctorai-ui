@@ -47,8 +47,8 @@ class DoctorAI extends Component {
     const lexParams = {
       credentials: {accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY, secretAccessKey: process.env.REACT_APP_AWS_SECRET},
       userId: process.env.REACT_APP_AWS_USERID, 
-      //region: process.env.REACT_APP_AWS_REGION
-      region: "us-east-1"
+      region: process.env.REACT_APP_AWS_REGION
+      //region: "us-east-1"
     };
 
     const input = {
@@ -74,6 +74,7 @@ class DoctorAI extends Component {
         }
       }
       catch (error) {
+        console.log(process.env);
         console.error(error)
         console.log('Doctor AI:' + textToSpeak);
         textToSpeak = "Sorry I can't answer that. Could you please try again?"
